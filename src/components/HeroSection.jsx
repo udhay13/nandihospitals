@@ -51,10 +51,10 @@ export default function HeroSection() {
                     playsInline
                     className="w-full h-full object-cover scale-105"
                     style={{ filter: 'brightness(0.65)' }}
-                    poster="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1920&q=80"
+                    poster="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=1920&q=80"
                 >
                     <source
-                        src="https://www.w3schools.com/html/mov_bbb.mp4"
+                        src="https://assets.mixkit.co/videos/5491/5491-720.mp4"
                         type="video/mp4"
                     />
                 </video>
