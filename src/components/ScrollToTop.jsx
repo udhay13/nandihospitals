@@ -6,15 +6,22 @@ export default function ScrollToTop() {
 
     useEffect(() => {
         if (hash) {
-            // Wait for the page to render, then scroll to the anchor with navbar offset
+            // Wait for the page to render (dealing with Framer Motion AnimatePresence mode="wait")
             const id = hash.replace('#', '');
-            setTimeout(() => {
+            let attempts = 0;
+
+            const scrollInterval = setInterval(() => {
                 const el = document.getElementById(id);
                 if (el) {
                     const navbarOffset = 100; // floating navbar height + spacing
                     const top = el.getBoundingClientRect().top + window.scrollY - navbarOffset;
                     window.scrollTo({ top, behavior: 'smooth' });
+                    clearInterval(scrollInterval);
+                } else if (attempts >= 10) {
+                    // Give up after 1 second
+                    clearInterval(scrollInterval);
                 }
+                attempts++;
             }, 100);
         } else {
             window.scrollTo({ top: 0, behavior: 'instant' });

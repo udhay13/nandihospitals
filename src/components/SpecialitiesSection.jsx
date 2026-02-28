@@ -122,12 +122,24 @@ export default function SpecialitiesSection() {
     return (
         <section className="section-padding bg-white" id="specialities">
             <div className="container-custom">
-                <SectionHeading
-                    badge="Our Expertise"
-                    title="World-Class"
-                    highlight="Medical Specialities"
-                    subtitle="Experience premium healthcare across 8 specialised departments, each equipped with cutting-edge technology."
-                />
+                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+                    <div className="flex-1 -mb-6">
+                        <SectionHeading
+                            badge="Our Expertise"
+                            title="World-Class"
+                            highlight="Medical Specialities"
+                            subtitle="Experience premium healthcare across 8 specialised departments, each equipped with cutting-edge technology."
+                            center={false}
+                        />
+                    </div>
+                    <Link
+                        to="/departments"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-white transition-all duration-300 hover:scale-105 shadow-lg flex-shrink-0"
+                        style={{ background: 'linear-gradient(135deg, #0A66C2, #00B8B8)' }}
+                    >
+                        Learn More <ArrowRight className="w-4 h-4" />
+                    </Link>
+                </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {specialities.map((spec, i) => {
@@ -165,7 +177,7 @@ export default function SpecialitiesSection() {
                                 </p>
 
                                 <Link
-                                    to={`/departments#${spec.id}`}
+                                    to={`/departments#all-departments`}
                                     className={`inline-flex items-center gap-1 text-sm font-semibold ${spec.iconColor} hover:gap-2 transition-all duration-200`}
                                 >
                                     Learn More <ArrowRight className="w-4 h-4" />

@@ -128,7 +128,7 @@ export default function Departments() {
             </section>
 
             {/* Departments grid */}
-            <section className="section-padding bg-white">
+            <section id="all-departments" className="relative section-padding bg-white" style={{ scrollMarginTop: '80px' }}>
                 <div className="container-custom">
                     <SectionHeading
                         badge="Specialities"
