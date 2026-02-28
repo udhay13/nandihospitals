@@ -160,9 +160,9 @@ export default function PatientCare() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
                         {['Government Schemes', 'ESI / CGHS', 'Corporate TPA', 'Private Insurance'].map((ins, i) => (
                             <ScrollReveal key={ins} delay={i * 0.1}>
-                                <div className="glass-card rounded-2xl p-5 text-center">
-                                    <ShieldCheck className="w-8 h-8 text-primary-500 mx-auto mb-3" />
-                                    <div className="font-semibold text-gray-800 text-sm">{ins}</div>
+                                <div className="glass-card rounded-2xl p-5 text-center flex flex-col items-center justify-center h-28">
+                                    <ShieldCheck className="w-8 h-8 text-primary-500 mx-auto mb-3 flex-shrink-0" />
+                                    <div className="font-semibold text-gray-800 text-sm leading-snug">{ins}</div>
                                 </div>
                             </ScrollReveal>
                         ))}

@@ -10,6 +10,8 @@ const About = lazy(() => import('./pages/About'));
 const Departments = lazy(() => import('./pages/Departments'));
 const PatientCare = lazy(() => import('./pages/PatientCare'));
 const Contact = lazy(() => import('./pages/Contact'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsOfUse = lazy(() => import('./pages/TermsOfUse'));
 
 function Loading() {
     return (
@@ -39,6 +41,8 @@ export default function App() {
                             <Route path="/departments" element={<Departments />} />
                             <Route path="/patient-care" element={<PatientCare />} />
                             <Route path="/contact" element={<Contact />} />
+                            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                            <Route path="/terms-of-use" element={<TermsOfUse />} />
                         </Routes>
                     </PageTransition>
                 </Suspense>

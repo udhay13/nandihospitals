@@ -122,23 +122,14 @@ export default function SpecialitiesSection() {
     return (
         <section className="section-padding bg-white" id="specialities">
             <div className="container-custom">
-                <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
-                    <div className="flex-1 -mb-6">
-                        <SectionHeading
-                            badge="Our Expertise"
-                            title="World-Class"
-                            highlight="Medical Specialities"
-                            subtitle="Experience premium healthcare across 8 specialised departments, each equipped with cutting-edge technology."
-                            center={false}
-                        />
-                    </div>
-                    <Link
-                        to="/departments"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-white transition-all duration-300 hover:scale-105 shadow-lg flex-shrink-0"
-                        style={{ background: 'linear-gradient(135deg, #0A66C2, #00B8B8)' }}
-                    >
-                        Learn More <ArrowRight className="w-4 h-4" />
-                    </Link>
+                <div className="mb-10">
+                    <SectionHeading
+                        badge="Our Expertise"
+                        title="World-Class"
+                        highlight="Medical Specialities"
+                        subtitle="Experience premium healthcare across 8 specialised departments, each equipped with cutting-edge technology."
+                        center={true}
+                    />
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -155,11 +146,11 @@ export default function SpecialitiesSection() {
                                 onMouseEnter={() => setHovered(spec.id)}
                                 onMouseLeave={() => setHovered(null)}
                                 whileHover={{ y: -10, scale: 1.02 }}
-                                className={`specialty-card group relative overflow-hidden cursor-pointer ${spec.bg} ${spec.border} border`}
+                                className={`specialty-card group relative overflow-hidden cursor-pointer flex flex-col ${spec.bg} ${spec.border} border`}
                             >
                                 {/* Gradient glow on hover */}
                                 <div
-                                    className={`absolute inset-0 bg-gradient-to-br ${spec.color} opacity-0 group-hover:opacity-8 transition-opacity duration-300 rounded-2xl`}
+                                    className={`absolute inset-0 bg-gradient-to-br ${spec.color} opacity-0 group-hover:opacity-8 transition-opacity duration-300 rounded-2xl pointer-events-none`}
                                 />
 
                                 {/* Icon */}
@@ -172,13 +163,13 @@ export default function SpecialitiesSection() {
                                 <h3 className="font-bold text-gray-900 text-base mb-2 leading-snug font-heading">
                                     {spec.title}
                                 </h3>
-                                <p className="text-gray-500 text-sm leading-relaxed mb-4">
+                                <p className="text-gray-500 text-sm leading-relaxed mb-4 flex-1">
                                     {spec.description}
                                 </p>
 
                                 <Link
-                                    to={`/departments#all-departments`}
-                                    className={`inline-flex items-center gap-1 text-sm font-semibold ${spec.iconColor} hover:gap-2 transition-all duration-200`}
+                                    to={`/departments#${spec.id}`}
+                                    className={`inline-flex items-center gap-1 text-sm font-semibold mt-auto ${spec.iconColor} hover:gap-2 transition-all duration-200`}
                                 >
                                     Learn More <ArrowRight className="w-4 h-4" />
                                 </Link>

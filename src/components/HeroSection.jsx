@@ -143,7 +143,7 @@ export default function HeroSection() {
                         variants={itemVariants}
                         className="text-sm sm:text-base md:text-lg text-blue-100 max-w-2xl mx-auto leading-relaxed"
                     >
-                        Providing 24-hour emergency services, stroke management, spine and orthopaedic
+                        Providing 24-hour emergency services, stroke management, spine &amp; orthopaedic
                         treatment, and comprehensive women's healthcare under one roof.
                     </motion.p>
 

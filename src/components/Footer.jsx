@@ -181,9 +181,8 @@ export default function Footer() {
                         © {new Date().getFullYear()} Nandi Hospital & Research Centre. All rights reserved.
                     </p>
                     <div className="flex items-center gap-5 text-xs text-blue-400">
-                        <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
-                        <a href="#" className="hover:text-white transition-colors">Disclaimer</a>
+                        <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link to="/terms-of-use" className="hover:text-white transition-colors">Terms of Use</Link>
                     </div>
                 </div>
             </div>

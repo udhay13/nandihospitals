@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
     Zap, Brain, Activity, Bone, Heart, Dna, Microscope, Baby, ArrowRight, Clock
 } from 'lucide-react';
@@ -98,6 +99,25 @@ const cardVariants = {
 };
 
 export default function Departments() {
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (!hash) return;
+        // Wait for the page to paint before scrolling
+        const id = hash.replace('#', '');
+        const timeout = setTimeout(() => {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // Flash highlight so the user can spot the card
+                el.style.transition = 'box-shadow 0.4s ease';
+                el.style.boxShadow = '0 0 0 3px rgba(0,184,184,0.6)';
+                setTimeout(() => { el.style.boxShadow = ''; }, 1800);
+            }
+        }, 400);
+        return () => clearTimeout(timeout);
+    }, [hash]);
+
     return (
         <div>
             {/* Page Hero */}
@@ -157,6 +177,7 @@ export default function Departments() {
                                         background: dept.bg,
                                         border: `1px solid ${dept.color}20`,
                                         boxShadow: '0 4px 20px rgba(0,0,0,0.04)',
+                                        scrollMarginTop: '100px',
                                     }}
                                 >
                                     <div className="flex items-start gap-5">
