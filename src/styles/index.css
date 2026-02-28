@@ -26,6 +26,12 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100vh;
+  }
+
   ::-webkit-scrollbar {
     width: 6px;
   }
