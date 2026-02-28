@@ -52,16 +52,7 @@ export default function Navbar() {
 
     return (
         <>
-            {/* Top Edge Protector to prevent scrolling content from showing above the floating navbar in the status bar area */}
-            <div
-                className={`fixed top-0 left-0 right-0 z-[45] transition-opacity duration-500 pointer-events-none ${scrolled ? 'opacity-100' : 'opacity-0'}`}
-                style={{
-                    height: 'max(env(safe-area-inset-top, 0px), 16px)',
-                    background: 'rgba(8, 15, 40, 0.95)',
-                    backdropFilter: 'blur(24px)',
-                    WebkitBackdropFilter: 'blur(24px)'
-                }}
-            />
+
             {/* Floating Navbar wrapper — shrinks inward on scroll */}
             <div
                 className="fixed top-0 left-0 right-0 z-50 pt-4"
