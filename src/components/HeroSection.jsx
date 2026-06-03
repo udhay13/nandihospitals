@@ -181,7 +181,7 @@ export default function HeroSection() {
                         </a>
 
                         <a
-                            href="https://maps.google.com"
+                            href="https://maps.app.goo.gl/KF2ZKDKfukRbzhmb8"
                             target="_blank"
                             rel="noopener noreferrer"
                             id="hero-directions"
