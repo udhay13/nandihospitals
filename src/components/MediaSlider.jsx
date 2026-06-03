@@ -390,7 +390,7 @@ export default function MediaSlider() {
               </motion.div>
 
               {/* Stats */}
-              <motion.div variants={textItem} className="flex flex-wrap gap-6 pt-4">
+              <motion.div variants={textItem} className="flex justify-between sm:justify-start sm:gap-8 pt-4 w-full md:w-auto">
                 {[
                   { v: '20+',    l: 'Years'     },
                   { v: '5,000+', l: 'Patients'  },
@@ -398,8 +398,8 @@ export default function MediaSlider() {
                   { v: '10+',   l: 'Doctors'   },
                 ].map((s) => (
                   <div key={s.l} className="text-center">
-                    <div className="text-2xl font-extrabold text-white">{s.v}</div>
-                    <div className="text-[11px] uppercase tracking-widest text-blue-300 font-semibold mt-0.5">{s.l}</div>
+                    <div className="text-xl sm:text-2xl font-extrabold text-white">{s.v}</div>
+                    <div className="text-[10px] sm:text-[11px] uppercase tracking-widest text-blue-300 font-semibold mt-0.5">{s.l}</div>
                   </div>
                 ))}
               </motion.div>
