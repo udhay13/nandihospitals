@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Phone } from 'lucide-react';
-import HeroSection from '../components/HeroSection';
+import MediaSlider from '../components/MediaSlider';
 import SpecialitiesSection from '../components/SpecialitiesSection';
 import WhyChooseSection from '../components/WhyChooseSection';
 import StatsSection from '../components/StatsSection';
@@ -76,7 +76,7 @@ function FinalCTABanner() {
 export default function Home() {
     return (
         <div>
-            <HeroSection />
+            <MediaSlider />
             <SpecialitiesSection />
             <WhyChooseSection />
             <StatsSection />
