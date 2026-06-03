@@ -4,7 +4,7 @@ import SectionHeading from './SectionHeading';
 const stats = [
     { end: 5000, suffix: '+', label: 'Patients Treated', prefix: '' },
     { end: 20, suffix: '+', label: 'Years of Excellence', prefix: '' },
-    { end: 100, suffix: '+', label: 'Specialist Doctors', prefix: '' },
+    { end: 10, suffix: '+', label: 'Specialist Doctors', prefix: '' },
     { end: 24, suffix: '×7', label: 'Emergency Services', prefix: '' },
     { end: 8, suffix: '', label: 'Speciality Departments', prefix: '' },
     { end: 98, suffix: '%', label: 'Patient Satisfaction', prefix: '' },

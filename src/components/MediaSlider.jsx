@@ -51,7 +51,7 @@ const slides = [
     poster: '/images/DSC01441.JPG',
     headline: 'World-Class',
     highlight: 'Surgical Suite',
-    sub: 'Modern operating theatres, ICU, and 100+ specialist doctors on call.',
+    sub: 'Modern operating theatres, ICU, and 10+ specialist doctors on call.',
     cta: 'Book Appointment',
     ctaTo: '/contact',
   },
@@ -395,7 +395,7 @@ export default function MediaSlider() {
                   { v: '20+',    l: 'Years'     },
                   { v: '5,000+', l: 'Patients'  },
                   { v: '24\u00d77',   l: 'Emergency' },
-                  { v: '100+',   l: 'Doctors'   },
+                  { v: '10+',   l: 'Doctors'   },
                 ].map((s) => (
                   <div key={s.l} className="text-center">
                     <div className="text-2xl font-extrabold text-white">{s.v}</div>

@@ -206,7 +206,7 @@ export default function HeroSection() {
                             { value: '20+', label: 'Years of Care' },
                             { value: '5,000+', label: 'Patients Treated' },
                             { value: '24×7', label: 'Emergency' },
-                            { value: '100+', label: 'Specialist Doctors' },
+                            { value: '10+', label: 'Specialist Doctors' },
                         ].map((s, i) => (
                             <div key={i} className="text-center">
                                 <div className="text-2xl sm:text-3xl font-extrabold text-white whitespace-nowrap">{s.value}</div>
