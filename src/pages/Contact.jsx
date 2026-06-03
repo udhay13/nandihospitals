@@ -108,7 +108,7 @@ export default function Contact() {
                                 >
                                     <iframe
                                         title="Nandi Hospital Location"
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.2697624578636!2d78.14635191500985!3d11.664318991890507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babedc4acb6b2b7%3A0x36e10b576e9888ec!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1614000000000!5m2!1sen!2sin"
+                                        src="https://maps.google.com/maps?q=NANDI%20HOSPITAL%20AND%20RESEARCH%20CENTRE,%20Tharamangalam,%20Tamil%20Nadu&t=&z=15&ie=UTF8&iwloc=&output=embed"
                                         width="100%"
                                         height="380"
                                         style={{ border: 0 }}
